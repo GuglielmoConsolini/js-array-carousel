@@ -23,4 +23,5 @@ if (imageNext >= listaImmagini.length){
     imageNext = 0;
 }
 
+
 listaImmagini[imageNext].classList.add("active");
