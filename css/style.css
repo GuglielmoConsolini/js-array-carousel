@@ -4,16 +4,36 @@
     box-sizing: border-box;
 }
 
+h1{
+    padding-left: 5rem;
+}
+
 body{
-    color: red;
-    background-color: black;
+    color: white;
+    background-image: url(https://t4.ftcdn.net/jpg/02/00/99/09/360_F_200990953_ZUQhJDEQGCmJ10H9mLq8XjEckDQQjau9.jpg);
+}
+
+.d-flex{
+    display: flex;
+    justify-content: center;
 }
 
 .container{
     width: 1000px;
     height: 550px;
-    border: 5px solid red;
-    object-fit: contain;
+    border: 5px solid black;
+    object-fit: fill;
+}
+
+.thumbnail{
+    height: 550px;
+    width: 350px;
+}
+
+.thumbnails{
+    height:calc(100% / 4.1);
+    width: 100%;
+    margin-bottom: 0;
 }
 
 .slide{
@@ -30,8 +50,14 @@ body{
     width: 1000px;
     display: flex;
     justify-content: space-between;
+    margin-left: 5rem;
 }
 
 i{
     font-size: 50px;
+}
+
+.active-thumbnail {
+    border: 2px solid whitesmoke;
+    opacity: 0.7; 
 }

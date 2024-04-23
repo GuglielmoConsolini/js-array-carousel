@@ -28,14 +28,8 @@ document.getElementById("next").addEventListener("click" , function(){
         imageNext = 0;
     }
     
-    
     listaImmagini[imageNext].classList.add("active");
-
-
 })
-
-
-
 
 document.getElementById("prev").addEventListener("click" , function(){
 
@@ -64,3 +58,32 @@ document.getElementById("prev").addEventListener("click" , function(){
 
 })
 
+let currentThumb;
+let nextThumb = 0;
+
+let thumbNails = document.querySelectorAll(".thumbnails");
+console.log(thumbNails);
+
+for (let i = 0; i < thumbNails.length; i++) {
+    let thumb = thumbNails[i];
+    thumb.addEventListener("click", function() {
+        
+        for (let j = 0; j < thumbNails.length; j++) {
+            let thumbnail = thumbNails[j];
+            thumbnail.classList.remove("active-thumbnail");
+        }
+
+        thumb.classList.add("active-thumbnail");
+
+        let activeSlide = document.querySelector(".slide.active");
+        if (activeSlide) {
+            activeSlide.classList.remove("active");
+        }
+
+        nextThumb = i;
+        let slides = document.querySelectorAll(".slide");
+        if (slides[nextThumb]) {
+            slides[nextThumb].classList.add("active");
+        }
+    });
+}
