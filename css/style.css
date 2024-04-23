@@ -25,3 +25,13 @@ body{
 .active{
     display: block;
 }
+
+.row{
+    width: 1000px;
+    display: flex;
+    justify-content: space-between;
+}
+
+i{
+    font-size: 50px;
+}

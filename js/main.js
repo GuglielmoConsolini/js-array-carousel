@@ -4,24 +4,52 @@ let imageNext;
 let listaImmagini = document.getElementsByClassName("slide");
 console.log(listaImmagini);
 
-for (let i = 0; i < listaImmagini.length; i++){
+document.getElementById("next").addEventListener("click" , function(){
 
-    const immagine = listaImmagini[i];
-    console.log(i , immagine)
 
-    if(immagine.classList.contains("active")){
+    for (let i = 0; i < listaImmagini.length; i++){
 
-        immagine.classList.remove("active")
-        imageActive = i
+        const immagine = listaImmagini[i];
+        console.log(i , immagine)
+    
+        if(immagine.classList.contains("active")){
+    
+            immagine.classList.remove("active")
+            imageActive = i
+        }
+    
     }
+    
+    imageNext = imageActive + 1;
+    
+    if (imageNext >= listaImmagini.length){
+        imageNext = 0;
+    }
+    
+    
+    listaImmagini[imageNext].classList.add("active");
 
-}
 
-imageNext = imageActive + 1;
+})
 
-if (imageNext >= listaImmagini.length){
-    imageNext = 0;
-}
+// for (let i = 0; i < listaImmagini.length; i++){
+
+//     const immagine = listaImmagini[i];
+//     console.log(i , immagine)
+
+//     if(immagine.classList.contains("active")){
+
+//         immagine.classList.remove("active")
+//         imageActive = i
+//     }
+
+// }
+
+// imageNext = imageActive + 1;
+
+// if (imageNext >= listaImmagini.length){
+//     imageNext = 0;
+// }
 
 
-listaImmagini[imageNext].classList.add("active");
+// listaImmagini[imageNext].classList.add("active");
