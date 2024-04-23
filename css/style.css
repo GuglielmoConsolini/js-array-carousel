@@ -1,0 +1,27 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    color: red;
+    background-color: black;
+}
+
+.container{
+    width: 1000px;
+    height: 550px;
+    border: 5px solid red;
+    object-fit: contain;
+}
+
+.slide{
+    width: 100%;
+    height: 100%;
+    display: none;
+}
+
+.active{
+    display: block;
+}
